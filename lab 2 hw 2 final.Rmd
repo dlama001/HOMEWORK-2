@@ -1,0 +1,62 @@
+---
+title: "lab 1"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+Author: "DAWA LAMA"
+Tittle: Dice 
+Econometrics Home Work 2
+DAWA LAMA
+Lab #1
+
+
+Possible Protocol 1 (PP1): 
+roll once; if get 6 then conclude the dice is not fair; if roll any other number then conclude it is fair. 
+Analyze PP1: Dice were fair, it gave 2 on first roll 
+so pobability of it could be unfair is 1/6 (because total possible outcome, 1,2,3,4,5,6)
+Probability of it could be fair is 5/6 because 6 only is unfair
+
+#here we will look at various ways
+#simulatedice rolls in r
+
+#6 sided dice - one roll
+#here we uaw the sample keyword,
+#the range is from 1 to 6
+#we simulateI1 roll
+sample(1:6, size=1, replace=TRUE)
+[1] 2
+
+
+```
+Possible protocal 2 (PP2)
+roll the dice 30 times. Group can specify a decision rule to judge that dice is fair or unfair. Consider the stats question: if fair dice are rolled 30 times, what is likely number of 6 resulting? How unusual is it, to get 1 more or less than that? How unusual is it, to get 2 more or less? 3? At least one member of the group should be able to do this with theory; at least one member of the group should be able to write a little program in R to simulate this. Analyze PP2 including the question: if the dice were fair, what is the chance it could be judged as unfair?
+#6 sided dice - one roll
+#here we uaw the sample keyword,
+#the range is from 1 to 6
+#we simulateI1 roll
+sample(1:6, size=30, replace=TRUE)
+
+as result 1 unfair means only one 6 out of 30 times roll
+So pobability of be unfair is 1/30
+so probabily of fair is 29/30
+
+ [1] 4 4 3 5 1 4 3 3 1 5 4 4 4 5 3 1 2 6 3 2 3 3 5 5 3 3 4 1 3 
+
+Possuble Protocal 3 (PP3)
+roll 100 times and specify decision rules. Some cases are easy: if every roll comes to 6 then might quickly conclude. But what about the edge cases? Is it fair to say that every conclusion has some level of confidence attached? Where do you set boundaries for decisions? Analyze PP3.
+#6 sided dice - one roll
+#here we uaw the sample keyword,
+#the range is from 1 to 6
+#we simulateI1 roll
+sample(1:6, size=100, replace=TRUE)
+[1] 2 3 3 3 4 6 1 5 1 3 2 4 5 6 6 2 2 3 1 2 1 2 2 2 2 4 5 3 4 1 5 2 1 6 2 2 4 3 3 6 5 2 6 4 1 2 5 3 1 3 1 3 4 6 5
+ [56] 3 2 4 1 5 1 2 3 6 4 1 1 5 1 1 1 3 5 1 2 4 1 2 5 3 6 2 3 6 3 6 1 2 2 5 5 5 1 3 6 2 4 2 5 6
+ 
+ "6=12 times"
+ others=88 times
+ Probability to be fair=88/100
+ probability to be unfair=12/100
+ 
+ 
